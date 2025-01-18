@@ -6,6 +6,3 @@ selector = Selection(["load", "New Game"],"Do you want to load a game or start a
 selectetOption = selector.serve()
 
 print(selectetOption)
-
-
-selector = Selection(["load", "New Game", {"menu" ,["load", "save", "exit"]}])
