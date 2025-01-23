@@ -26,6 +26,7 @@ class DiceRoll():
             totalDices += dice.roll()
         total = totalDices + self.modifier
         print("Total: ", totalDices, " + ", self.modifier, " = ", total)
+        return total
 
 
 def createDiceList(amount: int, diceType: int) -> list:
@@ -47,6 +48,6 @@ def interprateRollString(string: str) -> DiceRoll:
         dices = interprateDiceString(match.group(1))
         if (match.group(2)):
             if (match.group(3) == "-"):
-                return DiceRoll(dices, 0 - int(match.group(4)))
+                return DiceRoll(dices, -int(match.group(4)))
             return DiceRoll(dices, int(match.group(4)))
         return DiceRoll(dices)

@@ -8,4 +8,4 @@ class LivingBeing():
         self.attackDice = DiceRoll.interprateRollString(attackStr)
 
     def attack(self, target: 'LivingBeing'):
-        target.hp.change(self.attackDice.roll())
+        target.stats['HP'].change(-self.attackDice.roll())
