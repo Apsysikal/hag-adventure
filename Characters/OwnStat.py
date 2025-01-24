@@ -7,7 +7,12 @@ class OwnStat(TurnAction):
         self.turnMod = turnMod
 
     def change(self, mod: int) -> int:
-        self.value += mod
+        print(mod)
+        self.value = self.value + mod
+        if (self.value > self.maxValue):
+            self.value = self.maxValue
+        if (self.value < 0):
+            self.value = 0
         return self.value
 
     def turnAction():

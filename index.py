@@ -13,10 +13,10 @@ mc = Player()
 
 print(mc.stats['HUNGER'].value)
 
-bear = Creature.create("Bear")
+creature = Creature.create("Rabit")
 
-print(f"{bear.stats['HP'].value}/{bear.stats['HP'].maxValue}")
+print(f"{creature.stats['HP'].value}/{creature.stats['HP'].maxValue}")
 
-mc.attack(bear)
+mc.attack(creature)
 
-print(f"{bear.stats['HP'].value}/{bear.stats['HP'].maxValue}")
+print(f"{creature.stats['HP'].value}/{creature.stats['HP'].maxValue}")
